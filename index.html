@@ -38,30 +38,30 @@
         <section id="courses" class="courses-section">
             <div class="container">
                 <h2>Courses</h2>
-                <div class="course-grid">
+                <div class="course-grid" id="course-offerings">
                     <div class="course-card">
                         <div class="icon">&#128187;</div>
                         <h3>Computer Science</h3>
                         <p>DSA, DBMS, OS, CN</p>
-                        <button class="enroll-btn">Enroll now</button>
+                        <button class="enroll-btn" data-url="https://example.com/computer-science">Enroll now</button>
                     </div>
                     <div class="course-card">
                         <div class="icon">&#128200;</div>
                         <h3>Data Science</h3>
                         <p>Machine Learning, AI</p>
-                        <button class="enroll-btn">Enroll now</button>
+                        <button class="enroll-btn" data-url="">Enroll now</button>
                     </div>
                     <div class="course-card">
                         <div class="icon">&#128218;</div>
                         <h3>Placement Preparation</h3>
                         <p>Aptitude, Programming</p>
-                        <button class="enroll-btn">Enroll now</button>
+                        <button class="enroll-btn" data-url="https://example.com/placement">Enroll now</button>
                     </div>
                      <div class="course-card">
                         <div class="icon">&#127891;</div>
                         <h3>UGC NET</h3>
                         <p>Paper 1, Computer Science</p>
-                        <button class="enroll-btn">Enroll now</button>
+                        <button class="enroll-btn" data-url="">Enroll now</button>
                     </div>
                 </div>
             </div>
@@ -165,24 +165,38 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Function to filter and display only elements with a valid href
-            function displayValidLinks(containerId) {
-                const container = document.getElementById(containerId);
-                if (container) {
-                    const links = container.querySelectorAll('a');
+            // Function to filter and display only elements with a valid href or data-url
+            function displayValidContent() {
+                // For Free Notes and Lectures sections
+                const contentLists = document.querySelectorAll('.content-list');
+                contentLists.forEach(list => {
+                    const links = list.querySelectorAll('a');
                     links.forEach(link => {
-                        if (link.getAttribute('href') === null || link.getAttribute('href').trim() === '') {
+                        if (!link.getAttribute('href') || link.getAttribute('href').trim() === '') {
                             link.style.display = 'none'; // Hide if href is empty
                         } else {
                             link.style.display = 'block'; // Show if href is valid
                         }
                     });
-                }
+                });
+
+                // For Courses section
+                const courseCards = document.querySelectorAll('.course-card');
+                courseCards.forEach(card => {
+                    const enrollBtn = card.querySelector('.enroll-btn');
+                    if (!enrollBtn.getAttribute('data-url') || enrollBtn.getAttribute('data-url').trim() === '') {
+                        card.style.display = 'none'; // Hide the entire card if data-url is empty
+                    } else {
+                        // Make the button functional if there's a URL
+                        enrollBtn.addEventListener('click', function() {
+                            window.open(this.getAttribute('data-url'), '_blank');
+                        });
+                    }
+                });
             }
 
-            // Call the function for both notes and lectures containers
-            displayValidLinks('free-notes-list');
-            displayValidLinks('free-lectures-list');
+            // Call the function on page load
+            displayValidContent();
 
             // Scroll to section when header link is clicked
             document.querySelectorAll('nav ul li a').forEach(anchor => {

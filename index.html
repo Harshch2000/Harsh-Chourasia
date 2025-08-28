@@ -3,20 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Your Page Title</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Harsh Chourasia - Online Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to Your Website</h1>
+        <div class="container">
+            <nav>
+                <div class="logo">Harsh Chourasia</div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#notes">Free Notes</a></li>
+                    <li><a href="#lectures">Free Lectures</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <p>This is the main content area.</p>
+        <section id="about" class="hero">
+            <div class="container">
+                <div class="hero-content no-image">
+                    <div class="intro-text">
+                        <h1>Hi, I'm Harsh Chourasia</h1>
+                        <p>I teach Computer Science, Data Science, and placement preparation courses.</p>
+                        <p>Join my online/offline classes or enroll in personal mentorship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="courses-section">
+            <div class="container">
+                <h2>Courses</h2>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <div class="icon">&#128187;</div>
+                        <h3>Computer Science</h3>
+                        <p>DSA, DBMS, OS, CN</p>
+                        <button class="enroll-btn">Enroll now</button>
+                    </div>
+                    <div class="course-card">
+                        <div class="icon">&#128200;</div>
+                        <h3>Data Science</h3>
+                        <p>Machine Learning, AI</p>
+                        <button class="enroll-btn">Enroll now</button>
+                    </div>
+                    <div class="course-card">
+                        <div class="icon">&#128218;</div>
+                        <h3>Placement Preparation</h3>
+                        <p>Aptitude, Programming</p>
+                        <button class="enroll-btn">Enroll now</button>
+                    </div>
+                     <div class="course-card">
+                        <div class="icon">&#127891;</div>
+                        <h3>UGC NET</h3>
+                        <p>Paper 1, Computer Science</p>
+                        <button class="enroll-btn">Enroll now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="notes" class="free-content-section">
+            <div class="container">
+                <h2>Free Notes</h2>
+                <p>Download free lecture notes and study material.</p>
+                <div class="content-list" id="free-notes-list">
+                    <a href="" target="_blank" data-subject="UGC NET Paper 1">UGC NET Paper 1</a>
+                    <a href="" target="_blank" data-subject="Discrete Mathematics">Discrete Mathematics</a>
+                    <a href="" target="_blank" data-subject="Data Structures and Algorithms">Data Structures and Algorithms</a>
+                    <a href="" target="_blank" data-subject="Database Management Systems">Database Management Systems</a>
+                    <a href="" target="_blank" data-subject="Computer Networks">Computer Networks</a>
+                    <a href="" target="_blank" data-subject="Operating Systems">Operating Systems</a>
+                    <a href="" target="_blank" data-subject="Theory of Computation">Theory of Computation</a>
+                    <a href="" target="_blank" data-subject="Compiler Design">Compiler Design</a>
+                    <a href="" target="_blank" data-subject="Computer Architecture and Organization">Computer Architecture and Organization</a>
+                    <a href="" target="_blank" data-subject="Software Engineering">Software Engineering</a>
+                    <a href="" target="_blank" data-subject="Programming Paradigms">Programming Paradigms</a>
+                    <a href="" target="_blank" data-subject="Web Technologies">Web Technologies</a>
+                    <a href="" target="_blank" data-subject="Artificial Intelligence">Artificial Intelligence</a>
+                    <a href="" target="_blank" data-subject="Machine Learning">Machine Learning</a>
+                    <a href="" target="_blank" data-subject="Cyber Security and Cryptography">Cyber Security and Cryptography</a>
+                    <a href="" target="_blank" data-subject="Cloud Computing">Cloud Computing</a>
+                    <a href="" target="_blank" data-subject="Digital Logic">Digital Logic</a>
+                    <a href="" target="_blank" data-subject="Probability and Statistics">Probability and Statistics</a>
+                    <a href="" target="_blank" data-subject="Linear Algebra and Optimization">Linear Algebra and Optimization</a>
+                    <a href="" target="_blank" data-subject="Data Mining and Data Warehousing">Data Mining and Data Warehousing</a>
+                    <a href="" target="_blank" data-subject="Big Data Analytics">Big Data Analytics</a>
+                    <a href="" target="_blank" data-subject="Information Retrieval">Information Retrieval</a>
+                    <a href="" target="_blank" data-subject="Pattern Recognition">Pattern Recognition</a>
+                    <a href="" target="_blank" data-subject="Natural Language Processing">Natural Language Processing</a>
+                    <a href="" target="_blank" data-subject="Data Science Foundations">Data Science Foundations</a>
+                    <a href="" target="_blank" data-subject="C">C</a>
+                    <a href="" target="_blank" data-subject="C++">C++</a>
+                    <a href="" target="_blank" data-subject="Python">Python</a>
+                    <a href="" target="_blank" data-subject="Java">Java</a>
+                    <a href="" target="_blank" data-subject="HTML">HTML</a>
+                    <a href="" target="_blank" data-subject="CSS">CSS</a>
+                    <a href="" target="_blank" data-subject="JavaScript">JavaScript</a>
+                </div>
+                <button class="download-btn">Download Now</button>
+            </div>
+        </section>
+
+        <section id="lectures" class="free-content-section">
+            <div class="container">
+                <h2>Free Video Lectures</h2>
+                <p>Access free video lectures on Computer Science and Data Science</p>
+                <div class="content-list" id="free-lectures-list">
+                    <a href="" target="_blank" data-subject="UGC NET Paper 1">UGC NET Paper 1</a>
+                    <a href="" target="_blank" data-subject="Discrete Mathematics">Discrete Mathematics</a>
+                    <a href="" target="_blank" data-subject="Data Structures and Algorithms">Data Structures and Algorithms</a>
+                    <a href="" target="_blank" data-subject="Database Management Systems">Database Management Systems</a>
+                    <a href="" target="_blank" data-subject="Computer Networks">Computer Networks</a>
+                    <a href="" target="_blank" data-subject="Operating Systems">Operating Systems</a>
+                    <a href="" target="_blank" data-subject="Theory of Computation">Theory of Computation</a>
+                    <a href="" target="_blank" data-subject="Compiler Design">Compiler Design</a>
+                    <a href="" target="_blank" data-subject="Computer Architecture and Organization">Computer Architecture and Organization</a>
+                    <a href="" target="_blank" data-subject="Software Engineering">Software Engineering</a>
+                    <a href="" target="_blank" data-subject="Programming Paradigms">Programming Paradigms</a>
+                    <a href="" target="_blank" data-subject="Web Technologies">Web Technologies</a>
+                    <a href="" target="_blank" data-subject="Artificial Intelligence">Artificial Intelligence</a>
+                    <a href="" target="_blank" data-subject="Machine Learning">Machine Learning</a>
+                    <a href="" target="_blank" data-subject="Cyber Security and Cryptography">Cyber Security and Cryptography</a>
+                    <a href="" target="_blank" data-subject="Cloud Computing">Cloud Computing</a>
+                    <a href="" target="_blank" data-subject="Digital Logic">Digital Logic</a>
+                    <a href="" target="_blank" data-subject="Probability and Statistics">Probability and Statistics</a>
+                    <a href="" target="_blank" data-subject="Linear Algebra and Optimization">Linear Algebra and Optimization</a>
+                    <a href="" target="_blank" data-subject="Data Mining and Data Warehousing">Data Mining and Data Warehousing</a>
+                    <a href="" target="_blank" data-subject="Big Data Analytics">Big Data Analytics</a>
+                    <a href="" target="_blank" data-subject="Information Retrieval">Information Retrieval</a>
+                    <a href="" target="_blank" data-subject="Pattern Recognition">Pattern Recognition</a>
+                    <a href="" target="_blank" data-subject="Natural Language Processing">Natural Language Processing</a>
+                    <a href="" target="_blank" data-subject="Data Science Foundations">Data Science Foundations</a>
+                    <a href="" target="_blank" data-subject="C">C</a>
+                    <a href="" target="_blank" data-subject="C++">C++</a>
+                    <a href="" target="_blank" data-subject="Python">Python</a>
+                    <a href="" target="_blank" data-subject="Java">Java</a>
+                    <a href="" target="_blank" data-subject="HTML">HTML</a>
+                    <a href="" target="_blank" data-subject="CSS">CSS</a>
+                    <a href="" target="_blank" data-subject="JavaScript">JavaScript</a>
+                </div>
+                <button class="watch-btn">Watch Now</button>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 Your Name or Company</p>
+        <div class="container">
+            <p>&copy; 2023 Harsh Chourasia. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@drharshchourasia" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/YouTube_social_white_squircle.svg" alt="YouTube" width="30">
+                </a>
+            </div>
+        </div>
     </footer>
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to filter and display only elements with a valid href
+            function displayValidLinks(containerId) {
+                const container = document.getElementById(containerId);
+                if (container) {
+                    const links = container.querySelectorAll('a');
+                    links.forEach(link => {
+                        if (link.getAttribute('href') === null || link.getAttribute('href').trim() === '') {
+                            link.style.display = 'none'; // Hide if href is empty
+                        } else {
+                            link.style.display = 'block'; // Show if href is valid
+                        }
+                    });
+                }
+            }
+
+            // Call the function for both notes and lectures containers
+            displayValidLinks('free-notes-list');
+            displayValidLinks('free-lectures-list');
+
+            // Scroll to section when header link is clicked
+            document.querySelectorAll('nav ul li a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

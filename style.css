@@ -1,0 +1,296 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #222;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Example link color */
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Hero Section (About) */
+.hero {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero .hero-content {
+    /* Removed flex-direction: column and gap as image is gone */
+    display: block; /* Default block behavior for centering text */
+}
+
+/* Removed .hero .profile-pic and .hero .profile-pic img styles */
+
+.hero .intro-text h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero .intro-text p {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto; /* Center the text block */
+}
+
+/* Courses Section */
+.courses-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f0f2f5;
+}
+
+.courses-section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.course-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.course-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.enroll-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.enroll-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Free Content Sections (Notes & Lectures) */
+.free-content-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.free-content-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.free-content-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.free-content-section .content-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width as needed */
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.free-content-section .content-list a {
+    display: block; /* Make links block-level for better spacing */
+    background-color: #f0f2f5;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.free-content-section .content-list a:hover {
+    background-color: #e0e2e5;
+    color: #007bff;
+}
+
+.download-btn, .watch-btn {
+    background-color: #28a745; /* Green for download */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.download-btn:hover {
+    background-color: #218838;
+}
+
+.watch-btn {
+    background-color: #dc3545; /* Red for watch (YouTube style) */
+}
+
+.watch-btn:hover {
+    background-color: #c82333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .social-links {
+    margin-top: 20px;
+}
+
+footer .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+}
+
+footer .social-links img {
+    vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 0 15px 10px 15px;
+    }
+
+    .hero .intro-text h1 {
+        font-size: 32px;
+    }
+
+    .hero .intro-text p {
+        font-size: 16px;
+    }
+
+    .courses-section h2, .free-content-section h2 {
+        font-size: 30px;
+    }
+
+    .course-grid, .free-content-section .content-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero .intro-text h1 {
+        font-size: 28px;
+    }
+
+    .course-card, .free-content-section .content-list a {
+        padding: 20px;
+    }
+}
